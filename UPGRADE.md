@@ -2,24 +2,24 @@ For those of you who have been around since PayBear.io, you will need to upgrade
 
 To avoid service interruption, **this change has to be done by March 31, 2019**. 
 
-**Important!** BEFORE UPGRADING YOUR INTEGRATION TO V3, YOU MUST CREATE A MERCHANT WALLET AT [www.savvytech.com](https://www.savvytech.com). Feel free to use your existing PayBear email to log in.
+**Important!** BEFORE UPGRADING YOUR INTEGRATION TO V3, YOU MUST CREATE A MERCHANT WALLET AT [www.savvy.io](https://www.savvy.io). Feel free to use your existing PayBear email to log in.
 
 ## Shopping Cart Integrations
 For shopping cart integrations, this is a simple process.
 
-1. Log in to your dashboard at https://www.savvytech.com and create a merchant wallet when asked.
+1. Log in to your dashboard at https://www.savvy.io and create a merchant wallet when asked.
 2. Download the new [plugin](https://github.com/savvytechcom) and follow the installation instructions.
 3. Once the new plugin is installed and working, you can disable/delete the PayBear plugin.
 ## Custom Integrations
 For custom integrations, the steps will depend on your integration. Here’s the general approach that you might take:
 
-1. Log in to your dashboard at https://www.savvytech.com and create or import a wallet.
+1. Log in to your dashboard at https://www.savvy.io and create or import a wallet.
 2. Update your code to use new endpoints:
 
 | Old Endpoint Path  | New Endpoint Path |
 | ------------- | ------------- |
-| https://api.paybear.io/v2  | https://api.savvytech.com/v3  |
-| https://test.paybear.io/v2  | https://api.test.savvytech.com/v3  |
+| https://api.paybear.io/v2  | https://api.savvy.io/v3  |
+| https://test.paybear.io/v2  | https://api.test.savvy.io/v3  |
 
 3. Payment addresses created with the old API will be monitored for at least 3 months. Addresses created with the new API will be monitored only for 24 hours by default. To override this behavior you may use a new `lock_address_timeout` parameter when creating payment addresses. The value in seconds determine how long the address will be locked to the invoice. Use -1 for maximum time (3 months). More information can be found in the API Docs.
 

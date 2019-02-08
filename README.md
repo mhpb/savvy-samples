@@ -1,9 +1,9 @@
 <h3>Savvytech.com API</h3>
-This API allows to accept <b>Ethereum</b>, <b>Bitcoin</b>, <b>Bitcoin Cash</b>, <b>Bitcoin Gold</b>, <b>Litecoin</b>, <b>Dash</b> and <b>Ethereum Classic</b> payments. More details can be found on our website: https://www.savvytech.com
+This API allows to accept <b>Ethereum</b>, <b>Bitcoin</b>, <b>Bitcoin Cash</b>, <b>Bitcoin Gold</b>, <b>Litecoin</b>, <b>Dash</b> and <b>Ethereum Classic</b> payments. More details can be found on our website: https://www.savvy.io
 
 ### **API Keys**
 In order to use the system, you will need an API Key. 
-1. Create a personal wallet account at https://www.savvytech.com 
+1. Create a personal wallet account at https://www.savvy.io 
 2. Create a merchant wallet account when prompted.
 3. Navigate to your settings under Profile -> Settings -> Merchant and locate your API keys.
 4. Store API key in a safe location where only you have access. Don’t share it with anyone.
@@ -24,7 +24,7 @@ Before using the Savvy Merchant API, please enable the currencies you would like
 <table border="0" cellspacing="0" cellpadding="10" >
         <tbody><tr>
             <td>GET</td>
-            <td>https://api.savvytech.com/v3/currencies?token={token}</td>
+            <td>https://api.savvy.io/v3/currencies?token={token}</td>
         </tr>
     </tbody>
 </table>
@@ -42,7 +42,7 @@ Before using the Savvy Merchant API, please enable the currencies you would like
 <table border="0" cellspacing="0" cellpadding="10" >
         <tbody><tr>
             <td>GET</td>
-            <td>https://api.savvytech.com/v3/{crypto}/payment/{callback_url}?token={token}&lock_address_timeout={lock_address_timeout}
+            <td>https://api.savvy.io/v3/{crypto}/payment/{callback_url}?token={token}&lock_address_timeout={lock_address_timeout}
 </td>
         </tr>
     </tbody>
@@ -75,8 +75,8 @@ Before using the Savvy Merchant API, please enable the currencies you would like
 
 
 <h4>Example request URL:</h4>
-<a href="https://api.savvytech.com/v3/eth/payment/http%3A%2F%2Fputsreq.com%2FUv8u7ofxXDWVoaVawDWd/?token=YOURSECRET&lock_address_timeout=3600">
-https://api.savvytech.com/v3/eth/payment/http%3A%2F%2Fputsreq.com%2FUv8u7ofxXDWVoaVawDWd/?token=YOURSECRET&lock_address_timeout=3600</a>
+<a href="https://api.savvy.io/v3/eth/payment/http%3A%2F%2Fputsreq.com%2FUv8u7ofxXDWVoaVawDWd/?token=YOURSECRET&lock_address_timeout=3600">
+https://api.savvy.io/v3/eth/payment/http%3A%2F%2Fputsreq.com%2FUv8u7ofxXDWVoaVawDWd/?token=YOURSECRET&lock_address_timeout=3600</a>
 <h4>Response:</h4>
 <p>The API always responds with a JSON string. [data] collection contains the important values:
 [address] is the payment address to show to the customer
@@ -103,7 +103,7 @@ $apiSecret = 'YOURSECRET'; //your api key
 $callbackUrl = 'http://CHANGEME.com/callback.php?id='.$orderId;
 $lockAddressTimeout = 3600;
 
-$url = sprintf('https://api.savvytech.com/v3/eth/payment/%s?token=%s&lock_address=%s', urlencode($callbackUrl), $apiSecret, $lockAddressTimeout);
+$url = sprintf('https://api.savvy.io/v3/eth/payment/%s?token=%s&lock_address=%s', urlencode($callbackUrl), $apiSecret, $lockAddressTimeout);
 if ($response = file_get_contents($url)) {
     $response = json_decode($response);
     if (isset($response->data->address)) {
@@ -166,7 +166,7 @@ if ($data) {
 <table border="0" cellspacing="0" cellpadding="10" >
         <tbody><tr>
             <td>GET</td>
-            <td><a href="https://api.savvytech.com/v3/exchange/usd/rate">https://api.savvytech.com/v3/exchange/{fiat}/rate?date={date}&time={time}
+            <td><a href="https://api.savvy.io/v3/exchange/usd/rate">https://api.savvy.io/v3/exchange/{fiat}/rate?date={date}&time={time}
 </a></td>
         </tr>
     </tbody>
@@ -250,7 +250,7 @@ The API returns a JSON string containing the rates from several online exchanges
 <table border="0" cellspacing="0" cellpadding="10" >
         <tbody><tr>
             <td>GET</td>
-            <td><a href="https://api.savvytech.com/v3/eth/exchange/usd/rate">https://api.savvytech.com/v3/{crypto}/exchange/{fiat}/rate?date={date}&time={time}</a></td>
+            <td><a href="https://api.savvy.io/v3/eth/exchange/usd/rate">https://api.savvy.io/v3/{crypto}/exchange/{fiat}/rate?date={date}&time={time}</a></td>
         </tr>
     </tbody>
 </table>
@@ -301,7 +301,7 @@ The API returns a JSON string containing the rates from several online exchanges
 <h4>PHP example:</h4> More examples: <a href="nodejs">Node.js</a>, <a href="rails">Ruby on Rails</a>
 
 ```php
-$url = "https://api.savvytech.com/v3/eth/exchange/usd/rate";
+$url = "https://api.savvy.io/v3/eth/exchange/usd/rate";
 
 if ($response = file_get_contents($url)) {
     $response = json_decode($response);

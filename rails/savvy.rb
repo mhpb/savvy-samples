@@ -5,7 +5,7 @@ $LOCK_ADDRESS_TIMEOUT = 3600
 def get_address(order_id, token = 'ETH')
   token = token.downcase
   callback_url = "http://CHANGEME.com/callback/#{order_id}"
-  url = "https://api.savvytech.com/v3/#{token}/payment/#{CGI.escape(callback_url)}?token=#{$savvy_SECRET}&lock_address=#{$LOCK_ADDRESS_TIMEOUT}"
+  url = "https://api.savvy.io/v3/#{token}/payment/#{CGI.escape(callback_url)}?token=#{$savvy_SECRET}&lock_address=#{$LOCK_ADDRESS_TIMEOUT}"
 
 
   begin
@@ -29,7 +29,7 @@ def get_currencies
   $currencies ||= nil
 
   if $currencies.nil?
-    url = "https://api.savvytech.com/v3/currencies?token=#{$savvy_SECRET}"
+    url = "https://api.savvy.io/v3/currencies?token=#{$savvy_SECRET}"
     response = ActiveSupport::JSON.decode(open(url).read)
 
     if response['success']
@@ -77,7 +77,7 @@ def get_rates
   $rates ||= nil
 
   if $rates.nil?
-    url = 'https://api.savvytech.com/v3/exchange/usd/rate'
+    url = 'https://api.savvy.io/v3/exchange/usd/rate'
     response = ActiveSupport::JSON.decode(open(url).read)
 
     if response['success']

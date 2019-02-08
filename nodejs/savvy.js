@@ -5,7 +5,7 @@ var SAVVY_SECRET = 'secAPIKEY';
 function getAddress(orderId, token, callback) {
   var callbackUrl = 'http://CHANGEME.com/savvy/callback/' + orderId;
   var lock_address = 3600;
-  var url = 'https://api.savvytech.com/v3/' + token.toLowerCase() + '/payment/' + '?token=' + SAVVY_SECRET + '&lock_address=' + lock_address;
+  var url = 'https://api.savvy.io/v3/' + token.toLowerCase() + '/payment/' + '?token=' + SAVVY_SECRET + '&lock_address=' + lock_address;
 
   https.get(url, function (res) {
     var rawData = '';
@@ -28,7 +28,7 @@ function getCurrencies(callback)
 {
     var currencies = null; //TODO: add cache here?
 
-    var url = 'https://api.savvytech.com/v3/currencies?token=' + SAVVY_SECRET;
+    var url = 'https://api.savvy.io/v3/currencies?token=' + SAVVY_SECRET;
 
     https.get(url, function (res) {
         var rawData = '';
@@ -83,7 +83,7 @@ function getRate(curCode, callback) {
 }
 
 function getRates(callback) {
-  var url = 'https://api.savvytech.com/v3/exchange/usd/rate';
+  var url = 'https://api.savvy.io/v3/exchange/usd/rate';
 
   https.get(url, function (res) {
     var rawData = '';

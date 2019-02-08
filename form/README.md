@@ -190,6 +190,6 @@ Example (multi currency form):
 
 
 # Code contributions
-- Have a suggestion or found a bug? Please [email us](mailto:contact@savvytech.com) or [ping our Telegram](https://t.me/paybear)
-- We offer bounties for developers, which means if you are capable of writing a shopping cart plugin or any other integration, please [email us](mailto:contact@savvytech.com).
-- Check our website for more information: https://www.savvytech.com/
+- Have a suggestion or found a bug? Please [email us](mailto:contact@savvy.io) or [ping our Telegram](https://t.me/paybear)
+- We offer bounties for developers, which means if you are capable of writing a shopping cart plugin or any other integration, please [email us](mailto:contact@savvy.io).
+- Check our website for more information: https://www.savvy.io/

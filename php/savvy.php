@@ -1,12 +1,12 @@
 <?php
-define('SAVVY_SECRET', 'secAPIKEY'); //get your key at www.savvytech.com
+define('SAVVY_SECRET', 'secAPIKEY'); //get your key at www.savvy.io
 
 function getAddress($orderId, $token = 'ETH') {
 	$callbackUrl = 'http://CHANGEME.com/callback.php?id='.$orderId;
     $lockAddressTimeout = 3600;
 
 	$token = strtolower($token);
-	$url = sprintf('https://api.savvytech.com/v3/%s/payment/%s?token=%s&lock_address=%s', $token, urlencode($callbackUrl), SAVVY_SECRET, $lockAddressTimeout);
+	$url = sprintf('https://api.savvy.io/v3/%s/payment/%s?token=%s&lock_address=%s', $token, urlencode($callbackUrl), SAVVY_SECRET, $lockAddressTimeout);
 	if ($response = file_get_contents($url)) {
 		$response = json_decode($response);
 		if (isset($response->data->address)) {
@@ -22,7 +22,7 @@ function getCurrencies()
 	static $currencies = false;
 
 	if (!$currencies) {
-		$url = sprintf( "https://api.savvytech.com/v3/currencies?token=%s", SAVVY_SECRET );
+		$url = sprintf( "https://api.savvy.io/v3/currencies?token=%s", SAVVY_SECRET );
 		if ( $response = @file_get_contents( $url ) ) {
 			$response = json_decode( $response, true );
 			if ( isset( $response ) && $response['success'] ) {
@@ -76,7 +76,7 @@ function getRates() {
 	static $rates = null;
 
 	if (empty($rates)) {
-		$url = "https://api.savvytech.com/v3/exchange/usd/rate";
+		$url = "https://api.savvy.io/v3/exchange/usd/rate";
 
 		if ( $response = file_get_contents( $url ) ) {
 			$response = json_decode( $response );
