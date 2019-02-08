@@ -16,7 +16,7 @@ Before using the Savvy Merchant API, please enable the currencies you would like
 * We’ve added easy testing with a testnet capability. This is a sandbox environment where you can try your integration before going live to ensure everything is set up and working properly. Check out the Testnet section for more details.
 * We’ve given merchants more control over the wallet their customer pays to with the lock_address_timeout parameter for creating a payment request.
 
-**A note about V3 API - This API was built to integrate with our newly-released Savvy Wallet. You must create or import a wallet in order to use the Savvy Merchant API.
+**A note about V3 API - This API was built to integrate with our newly-released Savvy Wallet. You must create or import a wallet in order to use the Savvy Merchant API. [More on Upgrading from V2](https://github.com/savvytechcom/savvy-samples/wiki/Upgrading-from-V2-to-V3)
 
 
 <h3>Get Currencies</h3>
@@ -314,3 +314,18 @@ if ($response = file_get_contents($url)) {
 <h3>Request Limit</h3>
 The system is designed to process thousands of transactions per second, so we do not limit the number of payments you can process.
 However, for DDoS protection reasons, the API calls are limited to 1000 per minute from one IP.
+
+<h3>Testnet</h3>
+Testnet is a sandbox environment where you can try your integration before going live to ensure everything is set up and working properly. All our supported blockchains are also supported by the testnet capability. 
+
+Important: the addresses used in the Testnet mode can only accept test money, which have no real value! For Ethereum we use Ropsten testnet. To get test coins you can use publicly available faucets.
+
+In order to switch your wallet to test mode, log in at https://www.savvytech.com and click Profile -> Settings -> Security -> Enable Test Network. Once switched to Testnet mode, you can find your Testnet API keys under the Merchant tab. If you haven’t created a test API Key before, you’ll need to create one clicking “+Add API Key”
+
+Sandbox endpoints are located under api.test.savvytech.com
+
+## Need help?
+Start with our <a href="https://help.savvytech.com">Knowledge Base</a> and <a href="https://help.savvytech.com/frequently-asked-questions">FAQ</a>.
+
+Still have questions or need support? Log in to your Savvy account and use the live chat to talk to our team directly!
+
