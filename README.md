@@ -12,7 +12,7 @@ In order to use the system, you will need an API Key.
 Before using the Savvy Merchant API, please enable the currencies you would like to accept in your merchant settings. You can find them under Profile -> Settings -> Merchant.
 
 ### **What’s new with V3?** 
-* We’ve added support for ERC20 tokens - DAI and BNB are now available as accepted cryptos. For merchants who want to avoid crypto-volatility, you can now have your customers pay in a stablecoin. For merchants who use Binance exchange frequently, you can have users pay in Binance coin and reap the benefits that come with holding BNB. 
+* We’ve added support for MakerDAO's ERC20 token Dai! For merchants who want to avoid crypto-volatility, you can now have your customers pay in a stablecoin.  
 * We’ve added easy testing with a testnet capability. This is a sandbox environment where you can try your integration before going live to ensure everything is set up and working properly. Check out the Testnet section for more details.
 * We’ve given merchants more control over the wallet their customer pays to with the lock_address_timeout parameter for creating a payment request.
 
