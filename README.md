@@ -1,4 +1,4 @@
-<h3>Savvytech.com API</h3>
+<h3>Savvy.io API</h3>
 This API allows to accept <b>Ethereum</b>, <b>Bitcoin</b>, <b>Bitcoin Cash</b>, <b>Bitcoin Gold</b>, <b>Litecoin</b>, <b>Dash</b> and <b>Ethereum Classic</b> payments. More details can be found on our website: https://www.savvy.io
 
 ### **API Keys**
@@ -16,7 +16,7 @@ Before using the Savvy Merchant API, please enable the currencies you would like
 * We’ve added easy testing with a testnet capability. This is a sandbox environment where you can try your integration before going live to ensure everything is set up and working properly. Check out the Testnet section for more details.
 * We’ve given merchants more control over the wallet their customer pays to with the lock_address_timeout parameter for creating a payment request.
 
-**A note about V3 API - This API was built to integrate with our newly-released Savvy Wallet. You must create or import a wallet in order to use the Savvy Merchant API. [More on Upgrading from V2](https://github.com/savvytechcom/savvy-samples/wiki/Upgrading-from-V2-to-V3)
+**A note about V3 API - This API was built to integrate with our newly-released Savvy Wallet. You must create or import a wallet in order to use the Savvy Merchant API. [More on Upgrading from V2](https://github.com/savvyio/savvy-samples/wiki/Upgrading-from-V2-to-V3)
 
 
 <h3>Get Currencies</h3>
@@ -320,12 +320,12 @@ Testnet is a sandbox environment where you can try your integration before going
 
 Important: the addresses used in the Testnet mode can only accept test money, which have no real value! For Ethereum we use Ropsten testnet. To get test coins you can use publicly available faucets.
 
-In order to switch your wallet to test mode, log in at https://www.savvytech.com and click Profile -> Settings -> Security -> Enable Test Network. Once switched to Testnet mode, you can find your Testnet API keys under the Merchant tab. If you haven’t created a test API Key before, you’ll need to create one clicking “+Add API Key”
+In order to switch your wallet to test mode, log in at https://www.savvy.io and click Profile -> Settings -> Security -> Enable Test Network. Once switched to Testnet mode, you can find your Testnet API keys under the Merchant tab. If you haven’t created a test API Key before, you’ll need to create one clicking “+Add API Key”
 
-Sandbox endpoints are located under api.test.savvytech.com
+Sandbox endpoints are located under api.test.savvy.io
 
 ## Need help?
-Start with our <a href="https://help.savvytech.com">Knowledge Base</a> and <a href="https://help.savvytech.com/frequently-asked-questions">FAQ</a>.
+Start with our <a href="https://help.savvy.io">Knowledge Base</a> and <a href="https://help.savvy.io/frequently-asked-questions">FAQ</a>.
 
 Still have questions or need support? Log in to your Savvy account and use the live chat to talk to our team directly!
 
